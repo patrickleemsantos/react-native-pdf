@@ -60,6 +60,7 @@ export default class Pdf extends Component {
         onPageChanged: PropTypes.func,
         onError: PropTypes.func,
         onPageSingleTap: PropTypes.func,
+        onPageScroll: PropTypes.func,
         onScaleChanged: PropTypes.func,
         onPressLink: PropTypes.func,
 
@@ -99,6 +100,8 @@ export default class Pdf extends Component {
         onError: (error) => {
         },
         onPageSingleTap: (page, x, y) => {
+        },
+        onPageScroll: (offset) => {
         },
         onScaleChanged: (scale) => {
         },
@@ -440,6 +443,7 @@ export default class Pdf extends Component {
                                                 onPageChanged={this.props.onPageChanged}
                                                 onError={this._onError}
                                                 onPageSingleTap={this.props.onPageSingleTap}
+                                                onPageScroll={this.props.onPageScroll}
                                                 onScaleChanged={this.props.onScaleChanged}
                                                 onPressLink={this.props.onPressLink}
                                             />)
